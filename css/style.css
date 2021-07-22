@@ -137,8 +137,90 @@ img {
   } */
 }
 
+/* todo 입력박스 */
+
+.todo {
+  margin-top: 2rem;
+  width: 100%;
+}
+#todo-form input {
+  width: 30rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.24);
+
+  color: rgb(255, 255, 255);
+  border-radius: 25px;
+  transition: all ease 1s;
+}
+
+#todo-form input::placeholder {
+  color: rgba(255, 255, 255, 0.829);
+  font-weight: bold;
+}
+
+#todo-form input:focus {
+  outline: none;
+  background-color: rgba(219, 219, 219, 0.2);
+  animation: float 1.5s ease-in-out infinite forwards;
+}
+#todo-form input:focus::placeholder {
+  color: rgb(255, 255, 255, 0.4);
+}
 /* todo 체크박스 */
+#todo-list {
+  padding-left: 0;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  width: 20rem;
+  max-height: 15rem;
+  overflow-y: scroll;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+#todo-list::-webkit-scrollbar {
+  display: none;
+}
+#todo-list li {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#todo-list input[type="checkbox"] {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+#todo-list input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
 input:checked + label {
   text-decoration: line-through;
-  color: rgb(141, 141, 141);
+  color: rgb(197, 197, 197);
+}
+
+label {
+  width: 15rem;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+#todo-list li button {
+  color: rgb(255, 255, 255, 0.6);
+  transition: all ease 0.5s;
+  background-color: rgb(255, 255, 255, 0.1);
+  border: none;
+}
+
+#todo-list li button:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(255, 255, 255, 0.5);
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 16px 0px;
+  animation: float 0.5s ease-in-out infinite forwards;
 }
