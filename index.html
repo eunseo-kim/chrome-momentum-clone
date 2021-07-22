@@ -6,19 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Serif+KR:wght@500&family=Sunflower:wght@500&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
+
     <title>Momentum Clone App</title>
   <body>
     <div class="main-content">
+      <!-- clock -->
       <h1 id="clock">00:00:00</h1>
       <form class="hidden" id="login-form">
         <input required maxlength="20" type="text" placeholder="What is your name?" />
       </form>
+      <!-- greeting -->
       <div class="greetings">
         <h1 class="hidden" id="greeting"></h1>
+        <!-- ellipsis -->
+        <form class="hidden"  id="ellipsis-form">
+            <input type="button"  id="ellipsis"> 
+            <label for="ellipsis" ><i class="fas fa-ellipsis-h"></i></label>
+        </form>
         <form class="hidden" id="renameBtn">
-          <input type="submit" value="rename?" />
+            <input type="submit" value="rename?" />
+        </form>
+      </div>
+      <!-- todo -->
+      <div class="todo">
+        <form  id="todo-form">
+          <input type="text" placeholder="What are your plans for today?">
+        </form>
+        <ul id="todo-list"></ul>
+        <form class="todos">
+          <input type="checkbox" id="123">
+          <label for="123">Check me!</label>        
         </form>
       </div>
     </div>
